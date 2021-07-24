@@ -1,0 +1,4 @@
+- [] #List to do
+- [x] Create branch develop - Carlos
+- [x] Create README.md - Rodrigo
+- [] Fill README.md - Rdrigo
