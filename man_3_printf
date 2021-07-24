@@ -14,5 +14,6 @@ putchar(3), printf(3)
 .SH BUGS
 No known bugs, so far.
 .SH AUTHOR
+Carlos Matallana (3496@holbertonschool.com)
 Rodrigo Zárate Algecira (rodrigozaratealgecira@gmail.com)
 i## 3- Create a man page for _printf function.
