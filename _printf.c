@@ -4,7 +4,7 @@
 * Date: July 27, 2021
 */
 
-#inlcude "holberton.h"
+#include "holberton.h"
 
 /**
 * _printf - Print formated
@@ -14,9 +14,12 @@
 
 int _printf(const char *format, ...)
 {
+struct w_print;
+array t;
 /*  no format */
 if (!format || !format[0])
-		return (-1);
+	return (-1);
+
 /* flavor */
 w_print t[] = {
 	{'d', print_int},
