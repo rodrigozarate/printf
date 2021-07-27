@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 {
 struct w_print;
 array t;
+int i;
 /*  no format */
 if (!format || !format[0])
 	return (-1);
@@ -24,13 +25,20 @@ if (!format || !format[0])
 w_print t[] = {
 	{'d', print_int},
 	{'i', print_int},
-	{'u', print_unsigned_int},
-	{'o', print_octal},
-	{'x', print_hex},
-	{'X', print_hex},
 	{'c', print_char},
-	{'s', print_string},
-	{'p', print_pointer},
-	{'r', print_rev},
+	{'s', print_string}
 	};
+
+/* walk format */
+while (format)
+{
+ i++;
 }
+
+/* array of natches */
+
+/* function convert from struct list */
+
+}
+
+
