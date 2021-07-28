@@ -6,6 +6,7 @@
 
 #include "holberton.h"
 
+
 /**
 * _printf - Print formated
 * @format: char pointer
@@ -14,31 +15,44 @@
 
 int _printf(const char *format, ...)
 {
-	struct w_print;
-	array t;
-	int i;
-/*  no format */
-	if (!format || !format[0])
+	va_list vaList;
+	int i, j, index = 0;
+	char bufer[2000];
+	char *str;
+	char* (*choose)(va_list);
+
+
+/*	int choose = get_op_func()*/
+
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-/* flavor */
-	w_print t[] = {
-			{'d', print_int},
-			{'i', print_int},
-			{'c', print_char},
-			{'s', print_string}
-	};
-
-/* walk format */
-	while (format)
+	va_start(vaList, format);
+	for (i = 0; format[i]; i++)
 	{
-		i++;
+		if (format[i] == '%')
+		{
+			i++;
+			choose = get_op_func((char *)format + i);  /* se caster const char a char *   */
+			if (!choose)
+			{
+				return (-1);
+			}
+
+			str = choose(vaList);
+
+			for (j = 0; str[j]; j++)
+			{
+				bufer[index] = str[j];
+				index++;
+			}
+		}
+		else
+		{
+			bufer[index] = format[i ];
+			index++;
+		}
 	}
-
-/* array of natches */
-
-/* function convert from struct list */
-
+	write(1, &bufer, index);
+	return (index);
 }
-
-
