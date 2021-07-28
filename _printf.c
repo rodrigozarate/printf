@@ -23,10 +23,11 @@ int _printf(const char *format, ...)
 
 /* flavor */
 	w_print t[] = {
-			{'d', print_int},
-			{'i', print_int},
-			{'c', print_char},
-			{'s', print_string}
+		{'d', print_int},
+		{'i', print_int},
+		{'c', print_char},
+		{'s', print_string},
+		{'\0', NULL}
 	};
 
 /* walk format */
@@ -40,5 +41,3 @@ int _printf(const char *format, ...)
 /* function convert from struct list */
 
 }
-
-
