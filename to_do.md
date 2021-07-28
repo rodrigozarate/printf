@@ -1,6 +1,0 @@
-- [] #List to do
-- [x] Create branch develop - Carlos
-- [x] Create README.md - Rodrigo
-- [] Fill README.md - Rodrigo
-- [x] Create man page file man_3_printf
-- [] Fill man page - Rodrigo
