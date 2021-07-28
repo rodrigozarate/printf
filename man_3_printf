@@ -1,0 +1,16 @@
+.TH man 8 "24 July 2021" "1.0" "_printf man page"
+.SH NAME
+_printf \- Print formated input 
+.SH SYNOPSIS
+_printf [*format, ...]
+.SH DESCRIPTION
+Print formated input to standard output
+.SH OPTIONS
+The _printf does not take any options. However, in the next hours it will.
+.SH SEE ALSO
+putchar(3), printf(3) 
+.SH BUGS
+No known bugs, so far.
+.SH AUTHOR
+Carlos Matallana (3496@holbertonschool.com)
+Rodrigo Zárate Algecira (rodrigozaratealgecira@gmail.com)
