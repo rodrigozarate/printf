@@ -14,26 +14,26 @@
 
 int _printf(const char *format, ...)
 {
-struct w_print;
-array t;
-int i;
+	struct w_print;
+	array t;
+	int i;
 /*  no format */
-if (!format || !format[0])
-	return (-1);
+	if (!format || !format[0])
+		return (-1);
 
 /* flavor */
-w_print t[] = {
-	{'d', print_int},
-	{'i', print_int},
-	{'c', print_char},
-	{'s', print_string}
+	w_print t[] = {
+			{'d', print_int},
+			{'i', print_int},
+			{'c', print_char},
+			{'s', print_string}
 	};
 
 /* walk format */
-while (format)
-{
- i++;
-}
+	while (format)
+	{
+		i++;
+	}
 
 /* array of natches */
 
