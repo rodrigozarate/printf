@@ -14,14 +14,14 @@
 
 int _printf(const char *format, ...)
 {
-	struct w_print;
-	array t;
+
 	int i;
 /*  no format */
 	if (!format || !format[0])
 		return (-1);
 
 /* flavor */
+	struct w_print;
 	w_print t[] = {
 		{'d', print_int},
 		{'i', print_int},
