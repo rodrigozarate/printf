@@ -12,7 +12,7 @@
 
 char *print_int(va_list theList)
 {
-char *whattoprint;
+char *whattosave;
 int n;
 int i = 0;
 /* look for null */
@@ -20,10 +20,12 @@ if(!theList)
 	return (NULL);
 
 /* get the numbers char by char */
-
+/* modolo operand */
+/* divide by ten */
+/* ++ i */
 /* put the numbers one by one in buffer */
-
+/* -- i */
 
 /* send to caller */
-return (whattoprint);
+return (whattosave);
 }
