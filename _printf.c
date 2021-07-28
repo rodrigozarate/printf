@@ -21,8 +21,8 @@ int _printf(const char *format, ...)
 		return (-1);
 
 /* flavor */
-	struct w_print;
-	w_print t[] = {
+	struct t[] = {
+		{'%', print_pocino},
 		{'d', print_int},
 		{'i', print_int},
 		{'c', print_char},
@@ -31,13 +31,17 @@ int _printf(const char *format, ...)
 	};
 
 /* walk format */
-	while (format)
+	for (i = 0;format;i++)
 	{
-		i++;
+		if (/* match format[i]  contra % */)
+			{
+				
+				if (/* compara format[i + 1] contra struct */)
+					/* llama funcion corresponde*/
+					/* escribe en el buffer */
+				else (/* morir */)
+			}
+
 	}
-
-/* array of natches */
-
-/* function convert from struct list */
-
+prit My buffer
 }
