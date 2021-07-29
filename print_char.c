@@ -16,6 +16,7 @@ char *print_char(va_list theList)
 {
 	char *whattosave;
 	char theChar;
+	char *porcino;
 
 	if (!theList)
 		return (0);
@@ -29,7 +30,17 @@ char *print_char(va_list theList)
 	}
 	if (theChar)
 	{
-		whattosave[1] = theChar;
+		if (theChar == '%')
+			{
+			porcino = malloc(sizeof(char) * 2);
+			porcino[0] = '%';
+			porcino[1] = '\0';
+			whattosave = porcino;
+			}	
+			else
+			{	
+			whattosave[0] = theChar;
+			}
 	/* is a real char */
 	}
 	else
