@@ -9,7 +9,7 @@
 * Return: String to print
 */
 
-char *print_char(va_list theList)
+char *print_str(va_list theList)
 {
 	char *whattosave;
 	char theChar;
@@ -23,7 +23,7 @@ char *print_char(va_list theList)
 	while (str[length] != '\0')
 		length++;
 
-	whattosave = malloc(i * sizeof(char));
+	whattosave = malloc((length * sizeof(char)) + 1);
 	if !(whattosave)
 	{
 		return (NULL);
@@ -31,7 +31,8 @@ char *print_char(va_list theList)
 	}
 
 	for (length = 0; str[length] != '\0'; length++)
-		write(1, &str[len], 1);
+		whattosave[length] = str[length];
+
 
 
 	return (whattosave);
