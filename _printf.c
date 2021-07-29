@@ -14,11 +14,12 @@
 
 int _printf(const char *format, ...)
 {
-va_list vaList;
-int i, j, index = 0;
-char bufer[2000];
-char *str;
-char* (*choose)(va_list);
+	va_list vaList;
+	int i, j, index = 0;
+	char bufer[1986];
+	char *str;
+	char* (*choose)(va_list);
+	char the_char;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -26,7 +27,7 @@ char* (*choose)(va_list);
 	va_start(vaList, format);
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			i++;
 			choose = get_op_func((char *)format + i);
@@ -47,6 +48,12 @@ char* (*choose)(va_list);
 		else
 		{
 			bufer[index] = format[i];
+			the_char = (char)bufer[index];
+			if (the_char == '%')
+			{
+				format++;
+			}
+
 			index++;
 		}
 	}
