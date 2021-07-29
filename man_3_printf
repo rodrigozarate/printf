@@ -1,14 +1,15 @@
 .TH man 8 "24 July 2021" "1.0" "_printf man page"
 .SH NAME
-_printf \- Print formated input 
+_printf \- Print formated input
 .SH SYNOPSIS
 _printf [*format, ...]
 .SH DESCRIPTION
 .B _printf()
 Prints formated input to standard output
-Detect the % character in 
-.I format
+Detect the % character in
+.I  format
  string and replace next character with the value of the matching var in args.
+
 The value in args must match the type defined by the flag, otherwise will return NULL.
 
 c = single character
@@ -30,7 +31,7 @@ On successful return the number of characters printed, excluding the null byte a
 
 _printf("%s %s","Carlos", "Rodrigo");
 .SH SEE ALSO
-putchar(3), printf(3) 
+putchar(3), printf(3)
 .SH BUGS
 No known bugs, so far.
 .SH AUTHOR
