@@ -34,7 +34,7 @@ char *print_char(va_list theList)
 			{
 			porcino = malloc(sizeof(char) * 2);
 			porcino[0] = '%';
-			porcino[1] = '\0';
+			porcino[1] = '%';
 			whattosave = porcino;
 			}	
 			else
