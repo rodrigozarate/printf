@@ -16,7 +16,7 @@ char *print_char(va_list theList)
 {
 	char *whattosave;
 	char theChar;
-	char *porcino;
+	char *porcino = "%";
 
 	if (!theList)
 		return (0);
@@ -32,10 +32,7 @@ char *print_char(va_list theList)
 	{
 		if (theChar == '%')
 			{
-			porcino = malloc(sizeof(char) * 2);
-			porcino[0] = '%';
-			porcino[1] = '%';
-			whattosave = porcino;
+			whattosave[0] = *porcino;
 			}	
 			else
 			{	
