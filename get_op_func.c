@@ -11,8 +11,8 @@ char *(*get_op_func(char *s))(va_list)
 	op_t ops[] = {
 			{'c', print_char},
 			{'s', print_str},
-			{'d',  print_int},
-			{'i',  print_int},
+			{'d', print_int},
+			{'i', print_int},
 			{'%', print_char},
 			{'\0', NULL}
 	};
