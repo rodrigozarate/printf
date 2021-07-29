@@ -6,7 +6,6 @@
 
 #include "holberton.h"
 
-
 /**
 * _printf - Print formated
 * @format: char pointer
@@ -15,14 +14,11 @@
 
 int _printf(const char *format, ...)
 {
-	va_list vaList;
-	int i, j, index = 0;
-	char bufer[2000];
-	char *str;
-	char* (*choose)(va_list);
-
-
-/*	int choose = get_op_func()*/
+va_list vaList;
+int i, j, index = 0;
+char bufer[2000];
+char *str;
+char* (*choose)(va_list);
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -33,7 +29,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			choose = get_op_func((char *)format + i);  /* se caster const char a char *   */
+			choose = get_op_func((char *)format + i);
+
 			if (!choose)
 			{
 				return (-1);
@@ -49,7 +46,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			bufer[index] = format[i ];
+			bufer[index] = format[i];
 			index++;
 		}
 	}
