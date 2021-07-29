@@ -26,7 +26,13 @@ char *print_int(va_list theList)
 	{
 		j = 1;
 		whattosave = malloc(sizeof(char) * 2);
+			if (whattosave)
 				whattosave[0] = '0';
+			else
+			{
+				free(whattosave);
+				return (NULL);
+			}
 	}
 	else
 	{
@@ -43,9 +49,17 @@ char *print_int(va_list theList)
 		if (n < 0)
 			muffer[i++] = '-';
 		whattosave = malloc(sizeof(char) * i);
-		i--;
-		while (i >= 0)
-			whattosave[j++] = muffer[i--];
+			if (whattosave)
+			{
+				i--;
+				while (i >= 0)
+				whattosave[j++] = muffer[i--];
+			}
+			else
+			{
+				free(whattosave);
+				return (NULL);
+			}
 	}
 	whattosave[j] = '\0';
 	return (whattosave);
