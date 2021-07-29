@@ -8,6 +8,12 @@
 
 int _printf(const char *format, ...);
 
+/**
+ * struct arg_s - args structure
+ *
+ * @f: Option for the argument.
+ * @op: Function to call.
+ */
 typedef struct arg_s
 {
 	char op;
