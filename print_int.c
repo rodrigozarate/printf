@@ -25,7 +25,7 @@ char *print_int(va_list theList)
 	if (n == 0)
 	{
 		j = 1;
-		whattosave = malloc(sizeof(char) * 2);a
+		whattosave = malloc(sizeof(char) * 2);
 				whattosave[0] = '0';
 	}
 	else
