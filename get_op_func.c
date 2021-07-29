@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* get_op_func - Select case according to letter
+* @s: selector pointer
+* Return: NULL or case
+*/
 
 char *(*get_op_func(char *s))(va_list)
 {
@@ -20,5 +25,4 @@ char *(*get_op_func(char *s))(va_list)
 		i++;
 	}
 	return (NULL);
-
 }
