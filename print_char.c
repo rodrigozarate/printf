@@ -29,23 +29,16 @@ char *print_char(va_list theList)
 	}
 	if (theChar)
 	{
-		if (theChar == '%')
-			{
-			whattosave[0] = '-';
-			}
-			else
-			{
-			whattosave[0] = theChar;
-			}
-	/* is a real char */
+		whattosave[0] = theChar;
+		/* is a real char */
 	}
 	else
 	{
 		whattosave[0] = '\0';
-	/* null in this space */
+		/* null in this space */
 	}
 	/* end */
 	whattosave[1] = '\0';
-	/* to the caller */
-	return (whattosave);
+/* to the caller */
+return (whattosave);
 }
