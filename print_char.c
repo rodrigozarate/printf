@@ -25,20 +25,15 @@ char *print_char(va_list theList)
 	if (!whattosave)
 	{
 		return (NULL);
-	/* malloc failed so exit */
 	}
 	if (theChar)
 	{
 		whattosave[0] = theChar;
-		/* is a real char */
 	}
 	else
 	{
 		whattosave[0] = '\0';
-		/* null in this space */
 	}
-	/* end */
 	whattosave[1] = '\0';
-/* to the caller */
 return (whattosave);
 }
