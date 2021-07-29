@@ -29,7 +29,14 @@ char *print_char(va_list theList)
 	}
 	if (theChar)
 	{
-		whattosave[1] = theChar;
+		if (theChar == '%')
+			{
+			whattosave[0] = '-';
+			}
+			else
+			{
+			whattosave[0] = theChar;
+			}
 	/* is a real char */
 	}
 	else
