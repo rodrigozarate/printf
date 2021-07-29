@@ -12,7 +12,6 @@
 char *print_str(va_list theList)
 {
 	char *whattosave;
-	char theChar;
 	char *str;
 	int length = 0;
 

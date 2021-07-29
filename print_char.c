@@ -4,7 +4,7 @@
 * Date: July 28, 2021
 */
 
-#include holberton.h
+#include "holberton.h"
 
 /**
 * print_char - Print formated
@@ -22,7 +22,7 @@ char *print_char(va_list theList)
 
 	theChar = va_arg(theList, int);
 	whattosave = malloc(sizeof(char) * 2);
-	if !(whattosave)
+	if (!whattosave)
 	{
 		return (NULL);
 	/* malloc failed so exit */
