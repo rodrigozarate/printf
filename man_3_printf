@@ -4,9 +4,31 @@ _printf \- Print formated input
 .SH SYNOPSIS
 _printf [*format, ...]
 .SH DESCRIPTION
-Print formated input to standard output
+.B _printf()
+Prints formated input to standard output
+Detect the % character in 
+.I format
+ string and replace next character with the value of the matching var in args.
+The value in args must match the type defined by the flag, otherwise will return NULL.
+
+c = single character
+
+s = string
+
+i = integer
+
+d = decimal
+
+% = %
+
 .SH OPTIONS
-The _printf does not take any options. However, in the next hours it will.
+The _printf does not take any options.
+.SH RETURN
+On successful return the number of characters printed, excluding the null byte at the end of strings.
+.SH EXAMPLE
+#include "holberton.h"
+
+_printf("%s %s","Carlos", "Rodrigo");
 .SH SEE ALSO
 putchar(3), printf(3) 
 .SH BUGS
