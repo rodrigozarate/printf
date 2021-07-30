@@ -48,6 +48,7 @@ int _printf(const char *format, ...)
 			index++;
 		}
 	}
+	va_end(vaList);
 	write(1, &bufer, index);
 	return (index);
 }
