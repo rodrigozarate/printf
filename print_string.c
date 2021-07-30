@@ -49,7 +49,7 @@ char *print_string(va_list theList)
 		return (result);
 	}
 	if (string[0] == '\0')
-		return (NULL);
+		string = "";
 	for (j = 0; string[j]; j++)
 	;
 	result = malloc(j + 1);
