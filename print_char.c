@@ -24,6 +24,7 @@ char *print_char(va_list theList)
 	whattosave = malloc(sizeof(char) * 2);
 	if (!whattosave)
 	{
+		free(whattosave);
 		return (NULL);
 	}
 	if (theChar)
