@@ -16,7 +16,6 @@
 char *_strreplace(char *deststr, char *source)
 {
 	int i = 0;
-	int j;
 
 	while (source[i])
 	{
@@ -37,6 +36,7 @@ char *print_string(va_list theList)
 {
 	char *string;
 	char *result;
+	int j;
 
 	if (!theList)
 		return (0);

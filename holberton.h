@@ -23,7 +23,7 @@ typedef struct arg_s
 char* (*get_op_func(char *s))(va_list);
 char *print_char(va_list theList);
 char *print_int(va_list theList);
-char *print_str(va_list theList);
+char *print_string(va_list theList);
 
 #endif /* HOLBERTON_H */
 
