@@ -54,7 +54,10 @@ char *print_string(va_list theList)
 	;
 	result = malloc(j + 1);
 	if (!result)
+		{
+		free(result);
 		return (NULL);
+		}
 	result = _strreplace(result, string);
 
 	return (result);
