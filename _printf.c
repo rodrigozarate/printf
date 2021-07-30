@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 				bufer[index] = str[j];
 				index++;
 			}
+			index = index == 0 ? 1 : index;
 		}
 		else
 		{
