@@ -13,6 +13,8 @@ char *(*get_op_func(char *s))(va_list)
 			{'s', print_string},
 			{'d', print_int},
 			{'i', print_int},
+			{'!', print_char},
+			{'K', print_char},
 			{'\0', NULL}
 	};
 	unsigned int i = 0;
