@@ -16,10 +16,8 @@ int _printf(const char *format, ...)
 {
 	va_list vaList;
 	int i, j, index = 0;
-	char bufer[1986];
-	char *str;
+	char bufer[1986], *str, the_char;
 	char* (*choose)(va_list);
-	char the_char;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -31,14 +29,9 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			choose = get_op_func((char *)format + i);
-
 			if (!choose)
-			{
 				return (-1);
-			}
-
 			str = choose(vaList);
-
 			for (j = 0; str[j]; j++)
 			{
 				bufer[index] = str[j];
@@ -50,9 +43,7 @@ int _printf(const char *format, ...)
 			bufer[index] = format[i];
 			the_char = (char)bufer[index];
 			if (the_char == '%')
-			{
 				format++;
-			}
 
 			index++;
 		}
