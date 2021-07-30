@@ -1,33 +1,61 @@
+/*
+* print_char.c - Function when c
+* Author: Rodrigo Zarate & Carlos Matallana
+* Date: July 28, 2021
+*/
+
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <unistd.h>
 
 /**
-* print_str - Print formated string
-* @theList: va_arg
-* Return: String to print
+* _strreplace - Replace string in case of NULL arg
+* @deststr: destiny
+* @source: fountain
+* Return: string
 */
-char *print_str(va_list theList)
+
+char *_strreplace(char *deststr, char *source)
 {
-	char *whattosave;
-	char *str;
-	int length = 0;
+	int i = 0;
+	int j;
+
+	while (source[i])
+	{
+		deststr[i] = source[i];
+		i++;
+	}
+	deststr[i] = '\0';
+	return (deststr);
+}
+
+/**
+* print_string - Prints the string
+* @theList: va_list pointer
+* Return: return pointer
+*/
+
+char *print_string(va_list theList)
+{
+	char *string;
+	char *result;
 
 	if (!theList)
 		return (0);
-
-	str = va_arg(theList, char *);
-	while (str[length] != '\0')
-		length++;
-
-	whattosave = malloc((length * sizeof(char)) + 1);
-	if (!whattosave)
+	string = va_arg(theList, char *);
+	if (string == NULL)
+	{
+		/* 6 for (null) 1 for '\0' */
+		result = malloc(sizeof(char) * 7);
+		result = _strreplace(result, "(null)");
+		return (result);
+	}
+	if (string[0] == '\0')
 		return (NULL);
+	for (j = 0; string[j]; j++)
+	;
+	result = malloc(j + 1);
+	if (!result)
+		return (NULL);
+	result = _strreplace(result, string);
 
-	for (length = 0; str[length] != '\0'; length++)
-		whattosave[length] = str[length];
-
-	return (whattosave);
+	return (result);
 }
